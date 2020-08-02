@@ -1,0 +1,221 @@
+body { 
+    font-family: sans-serif;
+    background-image: url("../assets/fundo.png");
+    background-attachment: fixed;
+    width: 90%;
+    max-width: 1030px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-style: italic;
+    background-color: rgba(113, 163, 239, 1);
+}
+
+h2 {
+    text-decoration: underline;
+    font-style: none;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #006064;
+}
+
+abbr {
+    background-color: yellow;
+}
+
+p {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 23px;  
+}
+
+div {
+    width: 960px;
+    padding: 30px;
+    border: dotted 5px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article div {
+    width: 200px;
+    height: 1989px;
+    padding: 5px;
+    border: dotted 5px;
+    text-align: center;
+    align-items: center; 
+}
+
+article div a {
+    position: relative;
+    top: 50%;
+}
+
+aside div{
+    width: 300px;
+    padding-left: 230px;
+    padding-right: 230px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#container-hobbies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#footer-hobbies {
+    width: 960px;
+    padding: 30px;
+    border: dotted 5px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+strong {
+    color: crimson;
+}
+
+em {
+    color: darkslategrey;
+}
+
+mark {
+    color: dodgerblue;
+}
+
+.dados-pessoais {
+    background-color: aqua;
+}
+
+.formacao {
+    background-color: blueviolet;
+}
+
+.projetos {
+    background-color: cornflowerblue;
+}
+
+.redes{
+    text-align: center;
+}
+
+.redes img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.redes .facebook {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.passa-tempo img{
+    width: 360px;
+    height: 360px;
+    margin: 10px;
+}
+
+
+.passa-tempo img:hover{
+    border-radius: 50px;
+}
+
+.video video{
+    width: 640px;
+}
+
+.video, .audio, .passa-tempo {
+    text-align: center;
+}
+
+.perfil2, .perfil3, .perfil4 {
+    background-color: blueviolet;
+    color: white;
+    font-size: 22px;
+}
+
+input:focus {
+    background-color: yellow;
+  }
+
+form textarea { 
+    resize:horizontal;
+    max-width: 500px;
+}
+
+a {
+    color: black;
+}
+
+.redes a {
+    color: white;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+.redes a:hover {
+    color: white;
+    border-radius: 50px;
+}
+
+.redes a img:hover {
+    color: white;
+    border-radius: 50px;
+}
+
+label {
+    font-size: 20px;
+}
+
+.contato p {
+    font-size: 30px;
+}
+
+

@@ -1,0 +1,53 @@
+.container .row.logo div {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container .row.logo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 200px;
+}
+
+.container .row.img div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container .row.img img {
+    height: 500px;
+    flex: 1;
+    margin: 15px;
+}
+
+.container .row.menu div {
+    display: flex;
+    justify-content: center;
+}
+
+.container .row.menu button {
+    border-radius: 0;
+    flex: 1;
+    margin: 15px;
+}
+
+.container .row.cards {
+    margin: 0 1px;
+}
+
+.container .row.rodape div button {
+    background: none;
+    border: none;
+}
+
+.container .row.rodape div span {
+    background: none;
+    border: none;
+    cursor: default;
+}
+
+.container .row.rodape div span:hover {
+    background: none;
+}

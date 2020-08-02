@@ -1,0 +1,151 @@
+body {
+  background-color: #C3F9FF;
+}
+
+#page-menu {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#page-menu .content {
+  width: 90%;
+  max-width: 1100px;
+  height: 115%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; 
+  margin-top: 50px;
+}
+
+#page-menu header {
+  background-color: #F75532;
+  display: flex;
+  align-items: center;
+  justify-content: inherit;
+  padding-left: 25px;
+  margin-left: -20px;
+  z-index: -1;
+}
+
+#page-menu header h3 {
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#page-menu header h3 button {
+ background: none;
+ color: white;
+ border: none;
+ cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+
+#page-menu img {
+  width: 125px;
+  height: 125px;
+  margin-top: 50px;
+}
+
+main {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1050px;
+  height:auto;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+  top: 40px;
+}
+
+main .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  gap: 24px
+}
+
+main .cards img {
+  width: 100%;
+  height: 150px;
+  
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 8px 8px 0 0;
+}
+
+main .cards h2 {
+  color: white;
+  background-color: red;
+  width: 40%;
+  height: 60px;
+  margin: 0 auto;
+  line-height: 58px;
+  margin-top: -80px;
+}
+
+main .card h1 {
+  text-align: center;
+  width: 100px;
+  left: 215px;
+  margin-top: -154px;
+  font-size: 20px;
+  
+  line-height: 41px;
+  color: #322153;
+  background-color: crimson;
+  position: relative;
+}
+
+main .card h4 {
+  text-align: center;
+  width: 100px;
+  left: 210px;
+  margin-top: -154px;
+  font-size: 20px;
+  
+  line-height: 41px;
+  color: #322153;
+  background-color: crimson;
+  position: relative;
+}
+
+main .card h3 {
+  margin: 24px 0;
+  text-align: center;
+
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  
+  font-size: 24px;
+  line-height: 34px;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+main .cards button {
+  bottom: 0px;
+  font-size: 16px;
+  line-height: 26px;
+  background-color: red;
+  color: white;
+  border: none;
+  left: 32%;
+  position: relative;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-radius: 4px;
+}
