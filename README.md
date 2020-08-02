@@ -1,2 +1,2 @@
 # digital-house_exercicios
-testando testandi
+Exercícios referentes ao curso de full stack web - Digital House
