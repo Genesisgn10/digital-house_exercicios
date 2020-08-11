@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício eventos</title>
+
+</head>
+
+<body>
+
+  <div>
+    <div>
+      <h2>Botões</h2>
+    </div>
+    <div>
+      <button onclick="alert('Olá')">Cumprimetar</button>
+
+      <button onclick=alterarCor()>Alterar fundo</button>
+    </div>
+
+  </div>
+
+  <div>
+    <div>
+      <h2>Imagens</h2>
+    </div>
+    <div>
+      <img onmouseenter="alert('estou vendo a imagem')" src="assets/img.jpg" alt="img"
+        style="width: 500px; height: 300px;">
+
+      <img id="img" src="assets/img.jpg" alt="img" style="width: 500px; height: 300px;">
+    </div>
+
+  </div>
+
+  <div>
+    <div>
+      <h2>Formulário</h2>
+    </div>
+    <div>
+      <form action="https://www.google.com/">
+        <button onclick=naoSubmeterFormulario()>Enviar</button>
+      </form>
+    </div>
+
+  </div>
+
+  <script>
+    function alterarCor() {
+      document.body.style.backgroundColor = "green";
+    }
+
+    document.getElementById("img").addEventListener("click", function () {
+      var x = event.clientX;     // Get the horizontal coordinate
+      var y = event.clientY;     // Get the vertical coordinate
+      var coor = "X coords: " + x + ", Y coords: " + y;
+
+      alert("estou clicando na imagem" + coor);
+
+    });
+
+    // document.body.addEventListener("click", function () {
+    //    this.style.backgroundColor = "red"
+    // });
+    function naoSubmeterFormulario() {
+      alert('Não é possível enviar');
+      //interromper um evento
+      event.preventDefault();
+    }
+
+    function myFunction() {
+      alert('hora do intervalo');
+    }
+
+    function myFunction2() {
+      alert('tempo esgotado!');
+    }
+
+    //método repete uma determinada função a cada intervalo de tempo.
+    //window.setInterval(myFunction, 5000);
+    //método pode ser escrito sem o prefixo da janela.
+    //window.setTimeout(myFunction2, 10000);
+
+  </script>
+</body>
+
+</html>
