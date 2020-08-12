@@ -1,0 +1,160 @@
+Questão >> 1 {
+  Letra C;
+}
+
+Questão >> 2 {
+  Linguagens de níveis baixos são aquelas que apresentam uma sintaxe que
+  mais se assemelha a linguagem das máquinas do que o linguajar humana. Já
+  às de níveis altos possuem a sintaxe mais próxima da nossa e mais distante
+  da linguagem das máquinas.    
+}
+
+Questão >> 3 {
+ Usaria uma variável do tipo Double, pois a mesma armazena valores com
+  casas decimais e, também, possuí uma precisão dupla.
+}
+
+Questão >> 4 {
+
+  String nome = "";
+  Scanner lerNome = new Scanner(System.in);
+
+  System.out.println("Informe seu nome:");  
+  nome = lerNome.nextLine();
+
+  System.out.println("Seja bem vindo " + nome + "!");
+
+}
+
+Questão >> 5 {
+
+    int idade;
+		  Scanner lerIdade = new Scanner(System.in);
+
+		  System.out.println("Informe sua idade:");  
+		  idade = lerIdade.nextInt();
+
+		  if(idade >= 18) {
+		    System.out.println("Você é maior de idade!");
+		  } else{
+		      if(idade < 0) {
+		        System.out.println("Essa idade não existe!");
+		    }
+		    System.out.println("Menor de idade!");
+		  }
+}
+
+Questão >> 6 {
+
+      int diaDaSemana;
+		  Scanner lerDia = new Scanner(System.in);
+
+		  System.out.println("Seja bem-vindo(a)!");
+		  
+		  System.out.println("1 >>>> Domingo"); 
+		  System.out.println("2 >>>> Segunda-Feira"); 
+		  System.out.println("3 >>>> Terça-Feira"); 
+		  System.out.println("4 >>>> Quarta-Feira"); 
+		  System.out.println("5 >>>> Quinta-Feira"); 
+		  System.out.println("6 >>>> Sexta-Feira"); 
+		  System.out.println("7 >>>> Sábado");
+		  System.out.println("");  
+
+		  System.out.println("Informe um número de acordo com o dia desejado:");  
+		  diaDaSemana = lerDia.nextInt();
+
+		  switch(diaDaSemana){
+		    case 1: 
+		      System.out.println("Não chore, tá? Mas é seu último dia de final de semana!");  
+		      break;
+		    case 2: 
+		      System.out.println("Se lascou, agora que a semana tá começando!"); 
+		      break; 
+		    
+		    case 3: 
+		      System.out.println("Ainda tá longe, visse!");
+		      break; 
+		    
+		    case 4: 
+		      System.out.println("Ainda não, jovem!");
+		      break; 
+		    
+		    case 5: 
+		      System.out.println("Tá chegando, ein!");
+		      break; 
+		    
+		    case 6: 
+		       System.out.println("Iuuuu, sextou! Mas ainda não é final de semana");
+		       break;
+		    
+		    case 7: 
+		       System.out.println("Agora pode curtir, o final de semana chegou!");
+		       break;
+		    
+		    default:
+		       System.out.println("Opção inválida! Informe de acordo com o menu");
+		       break;
+		    
+		  } 
+}
+
+Questão >> 7 {
+
+      //Função
+      public static int somarVetor(int vetor[]){
+		    int soma = 0;
+		    for(int x = 0; x < vetor.length; x++){
+		        soma = soma + vetor[x];
+		    }
+		    return soma;
+		  } 
+
+      Scanner lerValor = new Scanner(System.in);
+
+		  int idade;
+		  int[] valores = new int[4];
+		  int result = 0;
+		  
+		  System.out.println("Informe sua idade:");  
+		  idade = lerValor.nextInt();
+		  
+		  System.out.println("Você é penalmente imputável?");
+		  System.out.println("0 - Sim");
+		  System.out.println("1 - Não"); 
+		  valores[0] = lerValor.nextInt();
+		 
+		  
+		  System.out.println("Sabe ler e escrever?"); 
+		  System.out.println("0 - Sim");
+		  System.out.println("1 - Não");  
+		  valores[1] = lerValor.nextInt();
+		  
+		  
+		  System.out.println("Possui carteira de identidade?"); 
+		  System.out.println("0 - Sim");
+		  System.out.println("1 - Não");  
+		  valores[2] = lerValor.nextInt();
+		  
+		  System.out.println("Possui CPF?");
+		  System.out.println("0 - Sim");
+		  System.out.println("1 - Não");   
+		  valores[3] = lerValor.nextInt();
+		 
+
+		   if(idade >= 18) {
+		    result = somarVetor(valores);
+		    if(!(result != 0)){
+		    	System.out.println("Você tem os requisitos para dirigir!");
+		    }else {
+		    	System.out.println("Você não tem os requisitos para dirigir!");
+		    }
+		   
+		  } else{
+		      if(idade < 0) {
+		        System.out.println("Essa idade não existe!");
+		    }
+		    System.out.println("Menor de idade!");
+		  }
+  } 
+
+}
