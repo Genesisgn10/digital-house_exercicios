@@ -1,0 +1,72 @@
+Classe main >> {
+        Scanner ler = new Scanner(System.in);
+        Product produto = new Product();
+        DecimalFormat df = new DecimalFormat("###,##0.00");
+        
+        System.out.println("product data:");
+        
+        System.out.print("Name:");
+        produto.setName(ler.nextLine());
+        System.out.print("Price:");
+        produto.setPrice((ler.nextDouble()));
+        System.out.print("Quantity in stock:");
+        produto.setQtd(ler.nextInt());
+        
+        System.out.println("product data: "+ produto.getName() + ", $ " + df.format( produto.getPrice())+ " - " + produto.getQtd() + 
+            " units, " + "Total: $ " + df.format(produto.TotalValueInStock()));
+        
+        System.out.print("Adicionar quantidade produto:");
+        produto.AddProducts(ler.nextInt());
+        
+        System.out.println("product data: "+ produto.getName() + ", $ " + df.format( produto.getPrice())+ " - " + produto.getQtd() + 
+            " units, " + "Total: $ " + df.format(produto.TotalValueInStock()));
+        
+        System.out.print("Remover quantidade produto:");
+        produto.RemoveProducts(ler.nextInt());
+        
+        System.out.print("product data: "+ produto.getName() + ", $ " + df.format( produto.getPrice())+ " - " + produto.getQtd() + 
+            " units, " + "Total: $ " + df.format(produto.TotalValueInStock()));	
+}
+
+
+Classe Product >> {
+      public class Product {
+
+      String name = "";
+      double price;
+      int qtd;
+      
+      
+      public String getName() {
+        return name;
+      }
+      public void setName(String name) {
+        this.name = name;
+      }
+      public double getPrice() {
+        return price;
+      }
+      public void setPrice(double price) {
+        this.price = price;
+      }
+      public int getQtd() {
+        return qtd;
+      }
+      public void setQtd(int qtd) {
+        this.qtd = qtd;
+      }
+      
+      public double TotalValueInStock() {
+        double value = getPrice() * getQtd();
+        return value;
+      }
+      
+      public void AddProducts(int qtd) {
+        setQtd(getQtd() + qtd);
+      }
+      
+      public void RemoveProducts(int qtd) {
+        setQtd(getQtd() - qtd);
+      }
+    }
+}
