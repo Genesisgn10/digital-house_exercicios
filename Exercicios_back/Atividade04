@@ -1,0 +1,128 @@
+Classe main >> {
+  Funcionario funcionario = new Funcionario();
+		Cliente cliente = new Cliente();
+		
+		funcionario.adicionarFuncionario("Carlos Santo Jesus", 1, "triandor", "ativo", 1200.00, "15/08/2020", "7:00 - 12-:00");
+		cliente.cadastrarCliente("João da Silva","202002023", true, "Peito - Costas - Pernas - Ombro", "15/08/2020", "Nenhuma observação");
+		
+		funcionario.getFuncionario();
+		cliente.getCliente();
+}
+
+Classe Pessoa >> {
+  public String name = "";
+	String email = "";
+	String endereco = "";
+	String sexo = "";
+	int idade;
+	double altuta;
+	double peso;
+}
+
+Classe Funcionario >> {
+  public class Funcionario extends Pessoa{
+	
+	int codigoFuncionario;
+	String cargo = "";
+	String status = "";
+	double salario;
+	String dataAdmissao = "";
+	String horarioTrabalho = "";
+	
+	
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+	
+	public double getSalario() {
+		return this.salario;
+	}
+	
+	public void relatorio() {
+		
+	}
+	
+	public void adicionarFuncionario(String name, int codigoFuncionario, String cargo, String status, double salario, String dataAdmissao, String horarioTrabalho) {
+		 this.name = name;
+		 this.codigoFuncionario = codigoFuncionario;
+		 this.cargo = cargo;
+		 this.status = status;
+		 this.salario = salario;
+		 this.dataAdmissao = dataAdmissao;
+		 this.horarioTrabalho = horarioTrabalho;
+	}
+	
+	public void removerFuncionario() {
+		
+	}
+	
+	public void editarFuncionario() {
+		
+	}
+	
+	public void getFuncionario() {
+		System.out.println("---------------------------------------------");
+		System.out.println("Informações do funcionário:");
+		System.out.println("nome: " + name);
+		System.out.println("codigo: " + codigoFuncionario);
+		System.out.println("cargo: " + cargo);
+		System.out.println("status: " + status);
+		System.out.println("salario: " + salario);
+		System.out.println("dataAdmissao: " + dataAdmissao);
+		System.out.println("horarioTrabalho: " + horarioTrabalho);
+		System.out.println("---------------------------------------------");
+	}
+ }
+}
+
+Classe Cliente >> {
+  public class Cliente extends Pessoa{
+	
+	String matricula = ""; 
+	boolean ativo;
+	String listaTreino = "";
+	String dataCadastro = "";
+	String observacoes = "";
+	
+	
+	public void cadastrarCliente(String name, String matricula, boolean ativo, String listaTreino, String dataCadastro, String observacoes  ) {
+		this.matricula = matricula;
+		this.ativo = ativo;
+		this.listaTreino = listaTreino;
+		this.dataCadastro = dataCadastro;
+		this.observacoes = observacoes;
+	}
+	
+	public void removerCliente() {
+		
+	}
+	
+	public void relatorioCliente() {
+		
+	}
+	
+	public void editarCliente() {
+		
+	}
+	
+	public void getListaTreinos() {
+		
+	}
+	
+	public void setListaTreinos() {
+		
+	}
+	
+	public void getCliente() {
+		System.out.println("---------------------------------------------");
+		System.out.println("Informações do cliente:");
+		System.out.println("nome: " + name);
+		System.out.println("ativo: " + ativo);
+		System.out.println("listaTreino: " + listaTreino);
+		System.out.println("dataCadastro: " + dataCadastro);
+		System.out.println("observacoes: " + observacoes);
+		System.out.println("---------------------------------------------");
+	}
+	
+}
+}

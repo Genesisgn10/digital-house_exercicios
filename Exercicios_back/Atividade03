@@ -1,0 +1,233 @@
+Questão01 >> {
+    Scanner ler = new Scanner(System.in);
+		
+		int anoInicial = 1995;
+		int anoAtual;
+		int tempoTrabalho;
+		
+	
+		double aumento = 1.5;
+		double salario = 1000.00;
+		
+		System.out.print("Insira o ano:");
+		anoAtual = ler.nextInt();
+		
+		tempoTrabalho = anoAtual - anoInicial;
+		
+		int conatdor = 1;
+		while(conatdor <= tempoTrabalho ) {
+			salario = salario + ((aumento * salario) / 100);
+			
+			aumento = aumento * 2;
+			conatdor ++;
+		}
+		
+		System.out.print("Seu salário é " + salario+"R$");
+}
+
+Questão02 >> {
+	//funcao
+	public static int fatorial(int num) {
+			int fact = 1;
+			
+			for (int i = 1; i <= num; i++) {
+				fact = fact * i;
+			}
+			
+			return fact;
+			
+		}
+
+		//main
+		int num = 0;
+		int result = 0;
+			
+		Scanner ler = new Scanner(System.in);
+		
+		System.out.println("Digite um número inteiro");
+		num = ler.nextInt();
+		
+		for (int i = 1; i <= num; i++) {
+			result = result + (i + fatorial(i));
+		}
+		
+		System.out.println("E = " + result);
+		
+}
+
+Questão03 >> {
+    //função
+  	public static int fatorial(int num) {
+			
+			int result = 1;
+			
+			for(int x = 1; x <= num; x++) {
+				result *= x;
+			}
+			return  result;	
+		}
+
+    //main
+    Scanner ler = new Scanner(System.in);
+		
+		int num = 0;
+		int resul = 0;
+		
+		System.out.print("Digite um número:");
+		num = ler.nextInt();
+		
+		for(int x = 1; x <= num; x++) {
+			int valor = 0;
+			System.out.print("Digite outro numero:");
+			int num2 = ler.nextInt();
+			valor = fatorial(num2);
+			System.out.println("Valor: " + num2 + " - fatorial: " + valor);
+		}
+}
+
+Questão04 >> {
+    Scanner ler = new Scanner(System.in);
+		
+		String num;
+		
+		String array[] = new String[2];
+		
+		int contador = 1;
+		
+		while(contador < 5) {
+				
+			System.out.print("Digite um par números inteiros:");
+			num = ler.nextLine();
+			
+				array = num.split(",");
+				int value1 = Integer.parseInt(array[0]);
+				int value2 = Integer.parseInt(array[1]);
+				
+				for(int x = value1; x <= value2; x++) {
+					if(x % 2 == 0) {
+						System.out.print("["+x+"]");
+					}else {
+						System.out.println("Não há numero par");
+					}
+				}
+				
+				System.out.println("");
+		
+			contador++;
+		}
+}
+
+Questão05 >> {
+		double[] altura = new double[3];
+		double[] num = new double[3];
+		
+		double maior=0, numeroMaior = 0;
+		double menor=0, numeroMenor = 0;
+		
+		Scanner ler = new Scanner(System.in);
+		
+		for(int x = 0; x < 3; x++) {
+			System.out.print("Informe a numero:");
+			num[x] = ler.nextDouble();
+			
+			System.out.print("Informe a altura:");
+			altura[x] = ler.nextDouble();
+			System.out.println("--------------------");
+		}
+
+		for(int i=0;i<3;i++){
+			if(i==0){
+				maior = altura[i];
+				menor = altura[i];
+			}else{
+				if(altura[i]>maior){
+					maior = altura[i];
+					numeroMaior = num[i];
+			}
+				if(altura[i]<menor){
+					menor = altura[i];
+					numeroMenor = num[i];
+				}
+			}
+		}
+		
+		System.out.println("Número: " + numeroMenor + " - " + "altura: " + menor);
+
+}
+
+Questão07 >> {
+
+	int num1 = 1, num2 = 0;
+      
+        System.out.println(num1);
+        
+        for(int i = 0; i < 7; i++){
+            num1 = num1 + num2;
+            num2 = num1 - num2;
+            System.out.println(num1);
+        }
+}
+
+Questão08 >> {
+		Scanner ler = new Scanner(System.in);
+		int nTermos = 0;
+		int[] array;
+		int contador =  2;
+		
+		System.out.println("Digite o número de termos:");
+		nTermos = ler.nextInt();
+		
+		array = new int[nTermos];
+		
+		array[0] = 2;
+		array[1] = 7;
+		array[2] = 3;
+		
+		int valor = 0;
+		while(valor < nTermos) {
+			if(valor >= 3) {
+				array[valor] = contador * array[valor - 3];
+				contador++;
+				
+				if (contador > 4) {
+					contador = 2;
+				}		
+			}
+			
+			System.out.print(array[valor] + ", ");
+			valor++;
+		}
+}
+
+	Questão09 >> {
+		
+		int contador = 1;
+		
+		while(contador <= 50) {
+			if(contador % 2 == 0) {
+				System.out.println(contador);				
+			}
+			
+			contador++;
+		}
+	}
+
+	Questão10 >> {
+	
+	int num = 0;
+		
+	Scanner ler = new Scanner(System.in);
+	
+	System.out.println("Digite um número inteiro");
+	num = ler.nextInt();
+	
+	for(int i = 2; i < num; i++) {
+		if(num % i == 0) {
+			System.out.println("Não primo");
+			break;
+		}else {
+			System.out.println("Primo");
+			break;
+		}
+	 }
+	}
