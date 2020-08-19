@@ -1,0 +1,331 @@
+Exercicios da aula;
+
+//Exercicio Conta bancária
+-------------------------------------------------------------------------------------------------------------------------------------
+//Começo
+
+Main >>> {
+  Scanner ler = new Scanner(System.in);
+		
+		Conta conta;
+		
+		String resposta;
+		String nome;
+		int contaNumero;
+		
+		System.out.print("Enter account number: ");
+		contaNumero = ler.nextInt();
+		
+		System.out.println("Enter account holder: ");
+		nome = ler.next();
+		
+		System.out.print("Is there na initial deposit (y/n)?: ");
+		resposta = ler.next();
+		
+		resposta = resposta.toLowerCase();
+		
+		if(resposta.equals("y")) {
+			System.out.println("Enter initial deposit value: ");
+			conta = new Conta(nome, contaNumero);
+			conta.setSaldoConta(ler.nextDouble());
+		}else {
+			conta = new Conta(nome, contaNumero);
+			conta.setSaldoConta(0);
+		}
+		
+		conta.dadosConta();
+		
+		System.out.print("Enter a deposit value: ");
+		conta.deposito(ler.nextDouble());
+		
+		conta.dadosConta();
+		
+		System.out.print("Enter a withdraw value: ");
+		conta.saque(ler.nextDouble());	
+		
+		conta.dadosConta();
+}
+
+class conta >>> {
+  	public Conta(String nomeTitular, int numeroConta) {
+		super();
+		this.nomeTitular = nomeTitular;
+		this.numeroConta = numeroConta;
+	}
+
+	private static int numeroConta;
+	private String nomeTitular;
+	private double saldoConta;
+	
+	public double getSaldoConta() {
+		return saldoConta;
+	}
+	public void setSaldoConta(double saldoConta) {
+		this.saldoConta = saldoConta;
+	}
+	public void setNomeTitular(String nomeTitular) {
+		this.nomeTitular = nomeTitular;
+	}
+	public void saque(double valorSaque) {
+		double taxa = 5.00;
+		saldoConta = (saldoConta - valorSaque) - taxa;
+	}
+	
+	public void deposito(double valorDeposito) {
+		saldoConta = saldoConta + valorDeposito;
+	}
+	
+	public void dadosConta() {
+		System.out.println("------------------------------------------------------------------------------------------");
+		System.out.println("Account data:");
+		System.out.println("Account " + numeroConta + ", Holder: " + nomeTitular + ", Balance: $ " + saldoConta );
+		System.out.println("------------------------------------------------------------------------------------------");
+	}
+}
+//Fim
+-------------------------------------------------------------------------------------------------------------------------------------
+
+//Exercicio Media aluno
+------------------------------------------------------------------------------
+//Começo
+
+Main >>> {
+public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		Aluno aluno = new Aluno();
+		
+		System.out.print("Informe o nome do aluno:");
+		aluno.name = ler.nextLine();
+		
+		System.out.print("Informe nota 1:");
+		aluno.nota1 = ler.nextDouble();
+		
+		System.out.print("Informe nota 2:");
+		aluno.nota2 = ler.nextDouble();
+		
+		System.out.print("Informe nota 3:");
+		aluno.nota3 = ler.nextDouble();
+		
+		if(aluno.calulcarMedia() >= 60) {
+			System.out.println("Final grade = " + aluno.calulcarMedia());
+			System.out.println("pass");
+		}else {
+			System.out.println("Final grade = " + aluno.calulcarMedia());
+			System.out.println("Failed");
+			System.out.println("Missing " + (60.00 - aluno.calulcarMedia()) + " POINTS" );
+		}
+		
+	}
+}
+
+
+Class aluno >>> {
+  public class Aluno {
+	
+	public String name = "";
+	public double nota1;
+	public double nota2;
+	public double nota3;
+	
+	public double calulcarMedia() {
+		
+		double notaFinal = nota1 + nota2 + nota3;
+		return notaFinal;
+	}
+
+}
+}
+//Fim
+------------------------------------------------------------------------------
+
+//Exercicio Retangulo 
+------------------------------------------------------------------------------
+//Começo
+
+Main >> {
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		
+		Rectangle retangulo = new Rectangle();
+		
+		System.out.print("Informe a largura:");
+		retangulo.largura = ler.nextDouble();
+		
+		System.out.print("Informe a altura:");
+		retangulo.altura = ler.nextDouble();
+		
+		System.out.println("Área = "+ retangulo.area());
+		System.out.println("Perímetro = "+ retangulo.perimetro());
+		System.out.println(String.format("Diagonal: %.2f", retangulo.diagonal()));
+	}
+ }
+}
+
+Class retangulo >>> {
+  public class Rectangle {
+	
+	public double largura;
+	public double altura;
+	
+	
+	public double area() {
+		double areaRetangulo = largura * altura;
+		return areaRetangulo;
+	}
+	
+	public double perimetro() {
+		return ( largura * 2) + ( altura * 2);
+	}
+	
+	public double diagonal() {
+		double d;
+        d = Math.sqrt(Math.pow(largura,2)+Math.pow(altura,2));
+        return d;
+	}
+
+ }
+}
+//Fim
+------------------------------------------------------------------------------
+
+
+Exercicio Funcionario
+------------------------------------------------------------------------------
+//Começo
+
+Main >> {
+  public class Main {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		Employee dadosFuncionario = new Employee();
+				
+		System.out.print("Informe seu nome:");
+		dadosFuncionario.name = ler.nextLine();
+		
+		System.out.print("Informe seu salário:");
+		dadosFuncionario.gossSalary = ler.nextDouble();
+		
+		System.out.print("Informe a taxa:");
+		dadosFuncionario.tax = ler.nextDouble();
+		
+		System.out.println("Employee: " + dadosFuncionario.name + ", $ " + dadosFuncionario.vetSalary());
+		
+		System.out.print("Informe porcentagem acrecentar:");
+		System.out.println("Employee: " + dadosFuncionario.name + ", $ " + dadosFuncionario.ncreaseSalary(ler.nextDouble()));
+		
+
+	}
+ }
+}
+
+Class Funcionario >> {
+  public class Employee {
+
+	public String name = "";
+	public double gossSalary;
+	public double tax;
+	
+	public double vetSalary() {
+		double value = gossSalary - tax;
+		return value;
+	}
+	
+	public double ncreaseSalary(double num) {
+		double value = (gossSalary - tax) + ((num * gossSalary) / 100);
+		return value;
+	}
+ }
+}
+//Fim
+------------------------------------------------------------------------------
+
+Exercicio Produto
+------------------------------------------------------------------------------
+//Começo
+
+Main >> {
+  public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner(System.in);
+		Product produto = new Product();
+		DecimalFormat df = new DecimalFormat("###,##0.00");
+		
+		System.out.println("product data:");
+		
+		System.out.print("Name:");
+		produto.setName(ler.nextLine());
+		System.out.print("Price:");
+		produto.setPrice((ler.nextDouble()));
+		System.out.print("Quantity in stock:");
+		produto.setQtd(ler.nextInt());
+		
+		System.out.println("product data: "+ produto.getName() + ", $ " + df.format( produto.getPrice())+ " - " + produto.getQtd() + 
+				" units, " + "Total: $ " + df.format(produto.TotalValueInStock()));
+		
+		System.out.print("Adicionar quantidade produto:");
+		produto.AddProducts(ler.nextInt());
+		
+		System.out.println("product data: "+ produto.getName() + ", $ " + df.format( produto.getPrice())+ " - " + produto.getQtd() + 
+				" units, " + "Total: $ " + df.format(produto.TotalValueInStock()));
+		
+		System.out.print("Remover quantidade produto:");
+		produto.RemoveProducts(ler.nextInt());
+		
+		System.out.print("product data: "+ produto.getName() + ", $ " + df.format( produto.getPrice())+ " - " + produto.getQtd() + 
+				" units, " + "Total: $ " + df.format(produto.TotalValueInStock()));	
+
+	}
+ }
+}
+
+Class produto >> {
+  public class Product {
+
+	String name = "";
+	double price;
+	int qtd;
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public int getQtd() {
+		return qtd;
+	}
+	public void setQtd(int qtd) {
+		this.qtd = qtd;
+	}
+	
+	public double TotalValueInStock() {
+		double value = getPrice() * getQtd();
+		return value;
+	}
+	
+	public void AddProducts(int qtd) {
+		setQtd(getQtd() + qtd);
+	}
+	
+	public void RemoveProducts(int qtd) {
+		setQtd(getQtd() - qtd);
+	}
+ }
+}
+//Fim
+------------------------------------------------------------------------------

@@ -1,3 +1,7 @@
+Exercício 02 - Arrays
+https://drive.google.com/file/d/1cCB65teyLR0ZNAovtVYmIp0LsAcs18Hm/view?usp=sharing
+
+
 Classe main >> {
   Funcionario funcionario = new Funcionario();
 		Cliente cliente = new Cliente();
